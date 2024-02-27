@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to left ,rgb(2, 82, 82),teal, rgb(2, 82, 82));
+    margin: 1px;
+    padding: 1px;
+}
+
+div#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+
+    background-color: rgb(127, 173, 173);
+    box-shadow: 3px 5px 10px black;
+
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+div#container > h1 {
+    display: block;
+    width: 70%;
+    height: 5%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    
+    background-color: rgb(2, 82, 82);
+    box-shadow: 1px 2px 2px black;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.central {
+    margin-top: 20px;
+    text-align: center;
+}
+.central > label {
+    background-color: rgb(2, 82, 82);
+    box-shadow: 1px 2px 2px black;
+    color: white;
+    text-shadow: 1px 1px 3px black;]
+}
+
+input#button {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+
+    background-color: rgb(72, 153, 153);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+div#res {
+    width: 80%;
+    height: 7%;
+    margin: auto;
+
+    background-color: white;
+    text-align: center;
+    font-size: 2em;
+}
