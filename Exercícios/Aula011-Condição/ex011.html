@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro?</title>
+</head>
+<body>
+    <h1>Brasileiro?</h1>
+    Qual pais você mora? <input type="text" name="pais" id="pais" >
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="res"></div>
+
+    <script>
+
+        function ver() {
+            var pais = document.querySelector("input#pais").value
+            
+            var r = pais[0].toUpperCase() + pais.substring(1);
+            
+            var res = document.querySelector("div#res")
+
+            if (r == "Brasil") {
+                res.innerHTML = "<p>Você é <strong>Brasileiro!</strong></p>"
+            } else {
+                res.innerHTML = "<p>Você não é <strong>Brasileiro</strong></p>"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
