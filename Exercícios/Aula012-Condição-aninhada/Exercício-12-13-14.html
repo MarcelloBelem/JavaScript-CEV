@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados-Votação</title>
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        #central {
+            width: 50vw;
+            margin: auto;
+            margin: auto;
+        }
+
+        div > #ressi, #resho, #resda {
+            margin-top: 10px;
+
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Descubra seu dia de votar</h1>
+    <div id="central">
+        Sua idade:<input type="number" name="idade" id="idade">
+        <input type="button" value="Descobrir" onclick="enviar()">
+        <div id="ressi"></div>
+        <div id="resho"></div>
+        <div id="resda"></div>
+    </div>
+
+    <script>
+        function enviar() {
+            var idadeD = document.querySelector("input#idade")
+            var idade = Number(idadeD.value)
+            var res = document.querySelector("div#res")
+            var sdd = new Date()
+            var hora = sdd.getHours() + 3
+            var dia = sdd.getDay()
+
+
+            /* Esse switch ultilizei para tranforma a variavel dia que esta recebendo o valor numérico referente ao dia do propio sistema(lembrando que os dias vem com valores de 0(Domingo) á 7(Sábado), em string, para o nome do dias) */
+            switch (dia) {
+                case 0 :
+                    var dia = "Domingo"
+                    break
+                case 1 :
+                    var dia = "Segunda-feira"
+                    break
+                case 2 :
+                    var dia = "Terça-feira"
+                    break
+                case 3 :
+                    var dia = "Quarta-feira"
+                    break
+                case 4 :
+                    var dia = "Quinta-feira"
+                    break
+                case 5 :
+                    var dia = "Sexta-feira"
+                    break
+                case 6 :
+                    var dia = "Sábado"
+                    break
+            }
+
+
+            /* Ultilizei essa condição-aninhada para transforma a variavel idade em string referente a sua situação de voto; que podem, nâo podem e as opcionais para o voto. */
+            if (idade >= 18 && idade < 66) {
+                idade = "Voto Obrigatorio!"
+            } else if (idade > 16){
+                idade = "Voto Opcional"
+            } else if (idade < 16) {
+                idade = "Inapto ao Voto"
+            } else {
+                idade = "Voto Opcional"
+            }
+
+
+            /* Este outro switch foi usado para a variavel "idade='Inapto ao voto'" não mostra dia e hora de voto. */
+            switch (idade) {
+                case "Inapto ao Voto":
+                ressi.innerHTML = `Status de Voto: ${idade}`
+                resho.innerHTML = `Hora de chegada: INAPTO`
+                resda.innerHTML = `Dia para votação: INAPTO`
+                break
+                default:
+                ressi.innerHTML = `Status de Voto: ${idade}`
+                resho.innerHTML = `Hora de chegada: ${hora}:00hrs`
+                resda.innerHTML = `Dia para votação: ${dia}`
+                break
+            }
+        }
+    </script>
+</body>
+</html>
