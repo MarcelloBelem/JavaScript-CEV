@@ -40,6 +40,6 @@ for(var c = 1; c <= 10;c++) {
 var n1 = 1
 var n2 = 10
 var n3 = 1
-for (n1; n1 <= n2; n1++) {
+for (n1; n1 <= n2; n1 + n3) {
     console.log(n1)
 }

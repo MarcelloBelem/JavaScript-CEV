@@ -1,0 +1,32 @@
+body {
+    height: 96.9vh;
+    background-color: rgba(6, 94, 64, 0.808);
+    }
+
+header {
+    text-align: center;
+}
+
+section {
+    width: 80vw;
+    margin: auto;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.500);
+}
+
+div {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
