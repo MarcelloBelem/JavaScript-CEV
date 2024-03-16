@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Analisador de Números</h1></header>
+    <section>
+        <div id="user">
+            <label for="valor">Número (entre 1 e 100):</label>
+            <input type="number" name="" id="valor">
+            <input type="button" value="Adicionar" id="button-add" onclick="add()">
+        </div>
+        <div id="display-data">
+            <h1>Valores</h1>
+            <div id="array">
+                
+            </div>
+            <input type="button" value="Analisar" id="analyze" onclick="analyze()">
+            <div id="spaceanalyzed">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CELON.DEV</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

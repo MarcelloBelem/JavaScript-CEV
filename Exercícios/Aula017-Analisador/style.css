@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: seagreen;
+}
+
+header {
+    margin-top: 10%;
+    text-align: center;
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+section {
+    width: 80vw;
+    margin: auto;
+    padding: 10px;
+
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+section > div#user {
+}
+
+section > div#display-data {
+    margin-top: 10px;
+
+    text-align: center;
+}
+
+section > div > div#array {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+#analyze {
+    width: 70px;
+    margin-top: 10px;
+}
+
+#valor {
+    width: 60px;
+}
+
+#button-add {
+    margin-left: 10px;
+}
+
+#spaceanalyzed {
+    text-align: left;
+}
+
+footer {
+    margin-top: 10px;
+
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
