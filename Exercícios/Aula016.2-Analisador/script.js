@@ -13,6 +13,8 @@ function add() {
         array.innerHTML += `<p>O valor ${valueData} foi adicionado!</p>`
         spaceAnalyze.innerHTML = ""
     }
+    valueUser.value = "" // Usador para o input(number) ser resetado apos a adição
+    valueUser.focus() // Usado para retornarmos ao input(number) sem precisa leva o mouse novamente
 }
 
 function analyze() {
@@ -26,9 +28,14 @@ function analyze() {
         let smaller = valores[0]
         let sum = 0
         // Este for server para fazer a soma dos valores da nossa array
+        for(let pos in valores) {
+            sum += valores[pos]
+        }
+        /* // Este metodo tem a mesma função que o acima dele, porem o de cima e mais simplificado
         for(let c = 0; c < valores.length; c++) { 
             sum += valores[c]
         }
+        */
         let average = sum / register
 
         spaceAnalyze.innerHTML = ""
